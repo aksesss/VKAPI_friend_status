@@ -46,6 +46,6 @@ class BaseClient:
                 self.method,
                 http_method=self.http_method
             )
-        except Exception:
-            print('Косячок братан')
+        except Exception as e:
+            print('Косячок братан: ' + str(e))
             self.success = False

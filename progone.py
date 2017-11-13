@@ -1,4 +1,5 @@
-from ClientVK import *
+# coding=utf-8
+from clientVK import *
 from gist import Gist
 
 
@@ -15,13 +16,13 @@ def main():
         print("ID: ", user_id)
     else:
         print('Нету такого айди, мэн')
-        return 0
+        return
 
     # find age list
     friends_ages_list = ClientGetFriendsAges(user_id).execute()
-    if len(friends_ages_list) == 0:
+    if not friends_ages_list:
         print('УУУУУ, нет друзей')
-        return 0
+        return
     else:
         print("Ages: ", friends_ages_list)
         # write gist
